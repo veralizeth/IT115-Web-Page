@@ -1,7 +1,11 @@
 # IT115-Web-Page
 
-1- Veralizeth
+Giihub page: https://github.com/veralizeth/IT115-Web-Page/settings/pages 
 
-2-Hanane
+Group: 
 
-3- Yasin
+Develop: Vera lizeth
+
+Researcher: Hanane
+
+Design and Css: Yasin
