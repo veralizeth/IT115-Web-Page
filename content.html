@@ -15,7 +15,7 @@
             margin: 0
         }
         /* Nav style */
-        ul {
+        .ul-nav {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -23,11 +23,11 @@
             background-color: #333;
         }
     
-        li {
+        .nav {
             float: left;
         }
     
-        li a {
+        .nav a {
             display: block;
             color: white;
             text-align: center;
@@ -35,7 +35,7 @@
             text-decoration: none;
         }
     
-        li a:hover {
+        .nav a:hover {
             background-color: #111;
         }
     </style>
@@ -43,12 +43,29 @@
         <h1>Content</h1>
         <h1 class="masthead">Windows</h1>
 		<nav>
-			<ul>
-				<li class="seasons"><a href="index.html">Home</a></li>
-				<li class="seasons"><a href="content.html">Content</a></li>
-				<li class="seasons"><a href="about.html">Evolution of Windows</a></li>
+			<ul class="ul-nav">
+				<li class="nav"><a href="index.html">Home</a></li>
+				<li class="nav"><a href="content.html">Applications in Windows</a></li>
+				<li class="nav"><a href="about.html">Evolution of Windows</a></li>
 			</ul>
-		</nav>        
+		</nav>    
+        <h3>Applications in Windows</h3>
+        <p>
+            There are all kinds of applications which are available at the Windows store and people can easily access them and
+            download them for their personal or professional usage.
+            <br></br>
+            Given below is a list of such application available on Windows:
+        </p>
+        <ul>
+            <li class="apps">Web Browsers</li>
+            <li class="apps">Adobe Photoshop</li>
+            <li class="apps">Adobe Reader</li>
+            <li class="apps">Messenger</li>
+            <li class="apps">Media Players</li>
+            <li class="apps">Games</li>
+            <li class="apps">Audio/ Video Chatting Apps</li>
+            <li class="apps">Maps & Calendar and this list goes on</li>
+        </ul>
         <script src="" async defer></script>
     </body>
 </html>
