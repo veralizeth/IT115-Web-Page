@@ -1,6 +1,6 @@
 # IT115-Web-Page
 
-Giihub page: https://github.com/veralizeth/IT115-Web-Page/settings/pages 
+Giihub page: https://veralizeth.github.io/IT115-Web-Page/
 
 Group: 
 
