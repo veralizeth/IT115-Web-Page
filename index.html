@@ -12,35 +12,215 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+    
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+    
+        .mySlides {
+            display: none
+        }
+    
+        img {
+            vertical-align: middle;
+        }
+    
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+    
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+    
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+    
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+    
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+    
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+    
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+    
+            to {
+                opacity: 1
+            }
+        }
+    
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+    
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
     <body>
-        <h1 class="masthead">Windows</h1>
+        <h1 class="masthead">Microsoft Windows</h1>
 		<nav>
 			<ul>
 				<li class="seasons"><a href="index.html">Home</a></li>
 				<li class="seasons"><a href="content.html">Content</a></li>
-				<li class="seasons"><a href="about.html">About</a></li>
+				<li class="seasons"><a href="about.html">Evolution of Windows</a></li>
 			</ul>
 		</nav>
-        <!--[if lt IE 7]>
-           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+
+        <div class="slideshow-container">
         
-	     <p> What is window: Windows is a group of several proprietary graphical operating system families developed and marketed by Microsoft.It is a separate viewing area on a computer display screen in a system that allows multiple viewing areas as part of a graphical user interface ( GUI ). Windows are managed by a windows manager as part of a windowing system .It can usually be resized by the user. There are 7 types of windows from it: Windows NT 3.1, Windows XP, Windows Vista, Windows 7, Windows 8 and 8.1, Windows10, Windows 11.</p>
-           
-           <p> Windows NT 3.1: Windows NT 3.1 was available in two editions: Windows NT 3.1 for workstations, and Windows NT 3.1 Advanced Server for servers. When these premiered, their sales were limited by high system requirements, and a general lack of 32-bit applications to take advantage of the OS's data processing capabilities.</p>
-           
-           <p> Windows XP: Windows XP is a major release of Microsoft's Windows NT operating system. It was released to manufacturing on August 24, 2001.</p>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="w1.png" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="w2.png" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="w3.png" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
 
-           <p> Windows Vista: Windows Vista is a major release of the Windows NT operating system developed by Microsoft. It was the direct successor to Windows XP, which was released five years earlier, at the time being the longest time span between successive releases of Microsoft's Windows desktop operating systems. Windows Vista aimed to increase the level of communication between machines on a home network, using peer-to-peer technology to simplify sharing files and media between computers and devices.</p>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
 
-           <p> Windows 7:  Windows 7 is an operating system that Microsoft has produced for use on personal computers. It is the follow-up to the Windows Vista Operating System, which was released in 2006. An operating system allows your computer to manage software and perform essential tasks.</p>
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
 
-           <p> Windows 8 and 8.1: Windows 8 provides heavier integration with online services from Microsoft and others. A user can now log into Windows with a Microsoft account, which can be used to access services and synchronize applications and settings between devices.</p>
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
 
-           <p> Windows 10: Windows 10 is a major release of Microsoft's Windows NT operating system. It is the direct successor to Windows 8.1, which was released nearly two years earlier. With Windows 10 we can: Get comprehensive, built-in, and ongoing security protections to help keep you and your family safe. Connect across devices to bring your favorite apps and files with you, anytime, anyplace. Stay efficient and productive with a Windows that's familiar, fast, and secure.</p>
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+        <p>Microsoft Windows, also called Windows and Windows OS, computer operating system (OS) developed by Microsoft Corporation
+        to run personal computers (PCs). Featuring the first graphical user interface (GUI) for IBM-compatible PCs, the Windows
+        OS soon dominated the PC market. Approximately 90 percent of PCs run some version of Windows.</p>
 
-           <p> Windows 11: Windows 11 is the latest major release of Microsoft's Windows NT operating system, released in October 2021. Windows 11 will let you set up virtual desktops in a way that's more similar to MacOS, toggling between multiple desktops for personal, work, school or gaming use. You can also change your wallpaper on each virtual desktop. Easier transition from monitor to laptop, and better multitasking.</p>
+        <p> What is window: Windows is a group of several proprietary graphical operating system families developed and marketed
+        by Microsoft.It is a separate viewing area on a computer display screen in a system that allows multiple viewing
+        areas as part of a graphical user interface ( GUI ). Windows are managed by a windows manager as part of a windowing
+        system .It can usually be resized by the user. There are 7 types of windows from it: Windows NT 3.1, Windows XP,
+        Windows Vista, Windows 7, Windows 8 and 8.1, Windows10, Windows 11.</p>
 
+        <h2>History</h2>
+
+        <p>The first version of Windows, released in 1985, was simply a GUI offered as an extension of Microsoft’s existing disk
+        operating system, or MS-DOS. Based in part on licensed concepts that Apple Inc. had used for its Macintosh System
+        Software, Windows for the first time allowed DOS users to visually navigate a virtual desktop, opening graphical
+        “windows” displaying the contents of electronic folders and files with the click of a mouse button, rather than typing
+        commands and directory paths at a text prompt.</p>
+
+        <p>Resources</p>
+        <p>https://www.britannica.com/technology/Microsoft-Windows</p>
         <script src="" async defer></script>
     </body>
 </html>
